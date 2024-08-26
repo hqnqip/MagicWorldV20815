@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-
 public class Main
 {
     public static void main(String[] args)
@@ -10,7 +9,6 @@ public class Main
         System.out.println(one.toString());
         mainStory(key, one);
     }
-
 
     public static Player start(Scanner key)
     {
