@@ -1,22 +1,22 @@
 import java.util.Scanner;
 
-
 public class Elf extends Player
 {
     Scanner key = new Scanner(System.in);
     String animal;
     int strength;
 
-
     //Constructors
-    public Elf() {
+    public Elf()
+    {
         super();
         animal = "Bear";
         strength = 80;
     }
 
 
-    public Elf(String name, int health, int coins, String animal, int strength) {
+    public Elf(String name, int health, int coins, String animal, int strength)
+    {
         super(name, health, coins);
         this.animal = animal;
         this.strength = strength;

@@ -4,17 +4,22 @@ public class Bard extends Player
     //Instance Variables
     Scanner key = new Scanner(System.in);
     boolean instrument;
-    int mana;
     int atk;
     int def;
 
 
-    //Constructor
-    public Bard (String name, boolean instrument)
+    //Constructors
+    //Default
+    public Bard()
     {
-        super(name);
+        super();
+        instrument = true;
+    }
+    //Everything
+    public Bard (String name, int health, int coins, boolean instrument)
+    {
+        super(name, health, coins);
         this.instrument = instrument;
-        mana = 20;
         atk = 30;
         def = 25;
         if (instrument)
@@ -26,10 +31,6 @@ public class Bard extends Player
 
 
     //Getters
-    public int getMana()
-    {
-        return mana;
-    }
     public int getAtk()
     {
         return atk;
@@ -41,6 +42,10 @@ public class Bard extends Player
 
 
     //Setters
+    public void setInstrument(boolean instrument)
+    {
+        this.instrument = instrument;
+    }
 
 
     //Brain Methods
@@ -60,7 +65,7 @@ public class Bard extends Player
         if (health < 16)
         {
             System.out.println("\n♫ Let my heart bravely spread the wings." +
-                               "\nSoaring past the night to chase the bright moonlight. ♫");
+                    "\nSoaring past the night to chase the bright moonlight. ♫");
             health += 5;
             System.out.println("Your health is " + health + ".");
         }
@@ -74,7 +79,7 @@ public class Bard extends Player
     public void songOfFlames(Goblin gob)
     {
         System.out.println("\n♫ Let my heart light up ablaze." +
-                           "\nWitness me in the hour of this scorching power. ♫");
+                "\nWitness me in the hour of this scorching power. ♫");
         gob.health -= atk / 5;
         System.out.println("The goblin's health is at " + gob.health + "/" + gob.maxHealth);
     }
@@ -85,9 +90,9 @@ public class Bard extends Player
     public String toString()
     {
         String output = super.toString() +
-                        "\nInstrument: " + instrument +
-                        "\nAtk: " + atk +
-                        "\nDef: " + def;
+                "\nInstrument: " + instrument +
+                "\nAtk: " + atk +
+                "\nDef: " + def;
         return output;
     }
 }

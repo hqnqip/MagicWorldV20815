@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Player
 {
     //Instance Variables
@@ -10,13 +9,22 @@ public class Player
     int coins;
 
 
-    //Constructor
-    public Player (String name)
+    //Constructors
+    //Default
+    public Player()
     {
-        this.name = name;
+        name = "Gandalf";
         health = 40;
         maxHealth = health;
         coins = 5;
+    }
+    //Everything
+    public Player (String name, int health, int coins)
+    {
+        this.name = name;
+        this.health = health;
+        maxHealth = health;
+        this.coins = coins;
     }
 
 
@@ -44,6 +52,10 @@ public class Player
     {
         this.name = name;
     }
+    public void setCoins(int coins)
+    {
+        this.coins = coins;
+    }
 
 
     //Brain Method
@@ -68,39 +80,28 @@ public class Player
     }
 
 
-    public void escape()
-    {
-        int ran = (int) (Math.random() * 3);
-        if (ran == 1)
-        {
-            System.out.println("You have successfully escaped the battle.");
-        }
-        else
-        {
-            System.out.println("Your foes have become angrier at your attempt to flee.");
-        }
-
-
-    }
+   /*
+   public void escape()
+   {
+       int ran = (int) (Math.random() * 3);
+       if (ran == 1)
+       {
+           System.out.println("You have successfully escaped the battle.");
+       }
+       else
+       {
+           System.out.println("Your foes have become angrier at your attempt to flee.");
+       }
+   }
+   */
 
 
     //toString
     public String toString()
     {
         String output = "Name: " + name +
-                        "\nHealth: " + health + "/" + maxHealth +
-                        "\nCoins: " + coins;
+                "\nHealth: " + health + "/" + maxHealth +
+                "\nCoins: " + coins;
         return output;
     }
 }
-
-
-/*
-Player: Name, Health
-> Bard: (Healing / Song Attacks)
-> Wizard: (Spell Attacks)
-> Elf: (Animal Shifter / Physical Attacks)
-
-
-Enemy: Health, Attack, Defense
-*/

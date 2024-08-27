@@ -8,11 +8,18 @@ public class Wizard extends Player
     int def;
 
 
-    public Wizard (String name, boolean staff)
+    //Constructors
+    //Default
+    public Wizard()
     {
-        super(name);
+        super();
+        staff = true;
+    }
+    //Everything
+    public Wizard (String name, int health, int coins, boolean staff)
+    {
+        super(name, health, coins);
         this.staff = staff;
-        mana = 20;
         atk = 35;
         if (staff)
         {
@@ -23,10 +30,6 @@ public class Wizard extends Player
 
 
     //Getters
-    public int getMana()
-    {
-        return mana;
-    }
     public int getAtk()
     {
         return atk;
@@ -34,6 +37,13 @@ public class Wizard extends Player
     public int getDef()
     {
         return def;
+    }
+
+
+    //Setters
+    public void setStaff(boolean staff)
+    {
+        this.staff = staff;
     }
 
 
@@ -48,12 +58,22 @@ public class Wizard extends Player
         {
             System.out.println("\nThe sky lights up with a white flash as thunder shook the world.");
             gob.health -= 15;
-            System.out.println("The goblin's health is at " + gob.health + "/20");
+            System.out.println("The goblin's health is at " + gob.health + "/" + gob.maxHealth);
         }
         else
         {
             gob.def -= 10;
         }
+    }
+
+
+    public void teleport()
+    {
+        System.out.println("Perhaps it would be better to simply use your teleportation spell." +
+                "\nUnfortunately, it may mean the expense of your health.");
+        int ran = (int)(Math.random() * 9);
+        health -= ran;
+        System.out.println("You have teleported!");
     }
 
 
