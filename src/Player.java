@@ -8,7 +8,6 @@ public class Player
     int maxHealth;
     int coins;
 
-
     //Constructors
     //Default
     public Player()
@@ -26,7 +25,6 @@ public class Player
         maxHealth = health;
         this.coins = coins;
     }
-
 
     //Getters
     public String getName()
@@ -46,7 +44,6 @@ public class Player
         return coins;
     }
 
-
     //Setters
     public void setName(String name)
     {
@@ -57,13 +54,11 @@ public class Player
         this.coins = coins;
     }
 
-
     //Brain Method
     public void addCoins(int num)
     {
         coins += num;
     }
-
 
     public void backpack()
     {
@@ -79,7 +74,6 @@ public class Player
         }
     }
 
-
    /*
    public void escape()
    {
@@ -94,7 +88,6 @@ public class Player
        }
    }
    */
-
 
     //toString
     public String toString()

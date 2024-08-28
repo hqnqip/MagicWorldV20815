@@ -6,7 +6,6 @@ public class Goblin
     int atk;
     int def;
 
-
     //Constructors
     //Default
     public Goblin()
@@ -25,7 +24,6 @@ public class Goblin
         this.def = def;
     }
 
-
     //Brain Methods
     public void strike(Player one)
     {
@@ -41,7 +39,6 @@ public class Goblin
             System.out.println("Your health is " + one.health + "/" + one.maxHealth);
         }
     }
-
 
     public void takeCoins(Player one)
     {
@@ -59,7 +56,6 @@ public class Goblin
             System.out.println("Oh my! The goblin has come to take your coins!");
         }
     }
-
 
     //toString
     public String toString()

@@ -7,7 +7,6 @@ public class Bard extends Player
     int atk;
     int def;
 
-
     //Constructors
     //Default
     public Bard()
@@ -29,7 +28,6 @@ public class Bard extends Player
         }
     }
 
-
     //Getters
     public int getAtk()
     {
@@ -40,13 +38,11 @@ public class Bard extends Player
         return def;
     }
 
-
     //Setters
     public void setInstrument(boolean instrument)
     {
         this.instrument = instrument;
     }
-
 
     //Brain Methods
     public void sing(Goblin gob)
@@ -58,7 +54,6 @@ public class Bard extends Player
         else
             songOfFlames(gob);
     }
-
 
     public void songOfHealing()
     {
@@ -75,7 +70,6 @@ public class Bard extends Player
         }
     }
 
-
     public void songOfFlames(Goblin gob)
     {
         System.out.println("\n♫ Let my heart light up ablaze." +
@@ -83,7 +77,6 @@ public class Bard extends Player
         gob.health -= atk / 5;
         System.out.println("The goblin's health is at " + gob.health + "/" + gob.maxHealth);
     }
-
 
     //toString
     @Override

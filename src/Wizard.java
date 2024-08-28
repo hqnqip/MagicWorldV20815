@@ -7,7 +7,6 @@ public class Wizard extends Player
     int atk;
     int def;
 
-
     //Constructors
     //Default
     public Wizard()
@@ -28,7 +27,6 @@ public class Wizard extends Player
         def = 35;
     }
 
-
     //Getters
     public int getAtk()
     {
@@ -39,13 +37,11 @@ public class Wizard extends Player
         return def;
     }
 
-
     //Setters
     public void setStaff(boolean staff)
     {
         this.staff = staff;
     }
-
 
     //Brain
     public void spell(Goblin gob)
@@ -66,7 +62,6 @@ public class Wizard extends Player
         }
     }
 
-
     public void teleport()
     {
         System.out.println("Perhaps it would be better to simply use your teleportation spell." +
@@ -75,7 +70,6 @@ public class Wizard extends Player
         health -= ran;
         System.out.println("You have teleported!");
     }
-
 
     //toString
     @Override

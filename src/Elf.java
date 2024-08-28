@@ -14,7 +14,6 @@ public class Elf extends Player
         strength = 80;
     }
 
-
     public Elf(String name, int health, int coins, String animal, int strength)
     {
         super(name, health, coins);
@@ -28,7 +27,6 @@ public class Elf extends Player
             this.strength += 10;
     }
 
-
     //Getters
     public String getAnimal()
     {
@@ -38,7 +36,6 @@ public class Elf extends Player
     {
         return strength;
     }
-
 
     //Setters
     public void setAnimal(String animal)
@@ -50,7 +47,6 @@ public class Elf extends Player
         this.strength = strength;
     }
 
-
     //Brain Method
     public void claw(Goblin gob)
     {
@@ -58,14 +54,12 @@ public class Elf extends Player
         gob.health -= (strength / 5);
     }
 
-
     public void tame(Goblin gob)
     {
         gob.health = 0;
         System.out.println("The goblin fainted from your small act of kindness." +
                 "\nYou are able to escape this goblin.");
     }
-
 
     //toString
     @Override
