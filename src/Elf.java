@@ -50,8 +50,18 @@ public class Elf extends Player
     //Brain Method
     public void claw(Goblin gob)
     {
-        //Add ultimate power-up.
-        gob.health -= (strength / 5);
+        if (animal.equals("Bear"))
+        {
+            gob.health -= (strength / 3);
+            System.out.println("You roared, standing up on your hind legs, and swung your arm down at the enemy." +
+                                "\nThe goblin's health is currently " + gob.health + "/" + gob.maxHealth);
+        }
+        else
+        {
+            gob.health -= (strength / 6);
+            System.out.println("You screeched, diving down at the goblin and swiping your talons!" +
+                                "\nThe goblin cried. Their health is currently " + gob.health + "/" + gob.maxHealth);
+        }
     }
 
     public void tame(Goblin gob)

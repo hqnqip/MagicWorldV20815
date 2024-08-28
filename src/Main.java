@@ -16,12 +16,10 @@ public class Main
         //Beginning the Main Plot with Scanner and Player.
         mainStory(key, one);
 
-
         //Creating other Objects...
         Bard venti = new Bard("Venti", 30, 10, true);
         Wizard gandalf = new Wizard("Gandalf", 80, 30, true);
     }
-
 
     //Instantiate Player Object.
     //Allows Player to select between Bard, Wizard, and Elf.
@@ -35,10 +33,8 @@ public class Main
                            Three of them. Flames of different colors. Your fate is in
                            your hands. Type a number from 1 to 3.""");
 
-
         //User Chooses Player Class.
         reply = key.nextLine();
-
 
         //This is for Bard.
         if (reply.equals("1"))
@@ -89,7 +85,6 @@ public class Main
         return unknown;
     }
 
-
     public static void mainStory(Scanner key, Player one)
     {
         String reply = "";
@@ -98,44 +93,34 @@ public class Main
                            But the path serves as your only way of finding the hidden elf town, known for\s
                            selling rare jewelry. Oh dear! You come across an angry goblin!""");
 
-
         Goblin gob = new Goblin(50, 15, 15);
 
-
         gob.takeCoins(one);
-
 
         while (gob.health > 0) {
             gob.strike(one);
             counter(one, gob);
         }
 
-
         System.out.println("\nAnd yet another one!");
 
-
         Goblin gobTwo = new Goblin(50, 15, 15);
-
 
         while (gobTwo.health > 0) {
             gobTwo.strike(one);
             counter(one, gobTwo);
         }
 
-
         System.out.println("""
                            An elderly man discovers you, who has slain the goblins.
                            You were awarded with 15 golden coins.""");
 
-
         one.addCoins(15);
         one.backpack();
-
 
         if (one instanceof Wizard)
             ((Wizard)one).teleport();
     }
-
 
     //Purpose: Player attacks.
     public static void counter(Player one, Goblin gob)
