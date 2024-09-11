@@ -68,7 +68,7 @@ public class Elf extends Player
     {
         gob.health = 0;
         System.out.println("The goblin fainted from your small act of kindness." +
-                "\nYou are able to escape this goblin.");
+                            "\nYou are able to escape this goblin.");
     }
 
     //toString

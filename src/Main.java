@@ -91,7 +91,7 @@ public class Main
         System.out.println("""
                            \nYou are on your way to enter Mirkwood, a forest of many terrible creatures.
                            But the path serves as your only way of finding the hidden elf town, known for\s
-                           selling rare jewelry. Oh dear! You come across an angry goblin!""");
+                           selling rare jewelry. Oh dear! You come across an angry goblin!\n\nEntering battle...""");
 
         Goblin gob = new Goblin(50, 15, 15);
 
@@ -100,19 +100,27 @@ public class Main
         while (gob.health > 0) {
             gob.strike(one);
             counter(one, gob);
+            if (gob.health <= 0)
+            {
+                System.out.println("\nBATTLE SUCCESSFUL!");
+            }
         }
 
-        System.out.println("\nAnd yet another one!");
+        System.out.println("\nOh no!\nAnd yet another one!\n\nEntering battle...");
 
-        Goblin gobTwo = new Goblin(50, 15, 15);
+        Goblin gobTwo = new Goblin();
 
         while (gobTwo.health > 0) {
             gobTwo.strike(one);
             counter(one, gobTwo);
+            if (gobTwo.health <= 0)
+            {
+                System.out.println("\nBATTLE SUCCESSFUL!");
+            }
         }
 
         System.out.println("""
-                           An elderly man discovers you, who has slain the goblins.
+                           \nAn elderly man discovers you, who has slain the goblins.
                            You were awarded with 15 golden coins.""");
 
         one.addCoins(15);

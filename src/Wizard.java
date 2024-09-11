@@ -58,6 +58,7 @@ public class Wizard extends Player
         }
         else
         {
+            System.out.println("\nThe electricity is lowering the Goblin's defense!");
             gob.def -= 10;
         }
     }
@@ -65,7 +66,7 @@ public class Wizard extends Player
     public void teleport()
     {
         System.out.println("Perhaps it would be better to simply use your teleportation spell." +
-                "\nUnfortunately, it may mean the expense of your health.");
+                            "\nUnfortunately, it may mean the expense of your health.");
         int ran = (int)(Math.random() * 9);
         health -= ran;
         System.out.println("You have teleported!");
