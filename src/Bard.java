@@ -57,11 +57,11 @@ public class Bard extends Player
 
     public void songOfHealing()
     {
-        if (health < 16)
+        if (health < (maxHealth - 5))
         {
             System.out.println("\n♫ Let my heart bravely spread the wings." +
                     "\nSoaring past the night to chase the bright moonlight. ♫");
-            health += 5;
+            health += 8;
             System.out.println("Your health is " + health + ".");
         }
         else
@@ -73,7 +73,7 @@ public class Bard extends Player
     public void songOfFlames(Goblin gob)
     {
         System.out.println("\n♫ Let my heart light up ablaze." +
-                "\nWitness me in the hour of this scorching power. ♫");
+                             "\nWitness me in the hour of this scorching power. ♫");
         gob.health -= atk / 5;
         System.out.println("The goblin's health is at " + gob.health + "/" + gob.maxHealth);
     }

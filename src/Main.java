@@ -2,7 +2,6 @@
 //Importing Scanner for User Input.
 import java.util.Scanner;
 
-
 public class Main
 {
     public static void main(String[] args)
@@ -131,11 +130,15 @@ public class Main
         else
         {
             System.out.println("\nOn the way, you met a duo of strange yet warming folk.");
-            Bard venti = new Bard("Venti", 30, 10, true);
-            Wizard gandalf = new Wizard("Gandalf", 80, 30, true);
+            Bard drunkBard = new Bard("Venti", 30, 10, true);
+            Wizard whiteBeard = new Wizard("Golly", 80, 30, true);
+            Elf bearElf = new Elf();
 
             System.out.println("A wizard speaks, \"Hello there, you must be " + one.getName() + "! I am " +
-                                gandalf.getName() + ". Their friend of a short stature");
+                                whiteBeard.getName() + ".\"\nTheir friend of a short stature says, \"The name's " +
+                                drunkBard.getName() + "!\"\n\nAnd there is another  who does not like to speak....");
+
+            System.out.println("\n" + whiteBeard.toString() + "\n\n" + drunkBard.toString() + "\n\n" + bearElf.toString());
         }
     }
 
