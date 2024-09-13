@@ -52,12 +52,14 @@ public class Elf extends Player
     {
         if (animal.equals("Bear"))
         {
+            //Add more User options....
             gob.health -= (strength / 3);
             System.out.println("You roared, standing up on your hind legs, and swung your arm down at the enemy." +
                                 "\nThe goblin's health is currently " + gob.health + "/" + gob.maxHealth);
         }
         else
         {
+            //Add more User options....
             gob.health -= (strength / 6);
             System.out.println("You screeched, diving down at the goblin and swiping your talons!" +
                                 "\nThe goblin cried. Their health is currently " + gob.health + "/" + gob.maxHealth);

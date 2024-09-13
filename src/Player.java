@@ -70,7 +70,7 @@ public class Player
         }
         else
         {
-            System.out.println("You continue your journey to Meridian.");
+            System.out.println("You decided to leave your backpack alone.");
         }
     }
 

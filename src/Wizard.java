@@ -3,7 +3,6 @@ public class Wizard extends Player
 {
     Scanner key = new Scanner(System.in);
     boolean staff;
-    int mana;
     int atk;
     int def;
 
@@ -53,7 +52,7 @@ public class Wizard extends Player
         if (reply.equals("1") || reply.equals("Thunder Bolt"))
         {
             System.out.println("\nThe sky lights up with a white flash as thunder shook the world.");
-            gob.health -= 15;
+            gob.health -= 20 - (gob.def/5);
             System.out.println("The goblin's health is at " + gob.health + "/" + gob.maxHealth);
         }
         else
@@ -67,9 +66,9 @@ public class Wizard extends Player
     {
         System.out.println("Perhaps it would be better to simply use your teleportation spell." +
                             "\nUnfortunately, it may mean the expense of your health.");
-        int ran = (int)(Math.random() * 9);
+        int ran = (int)(Math.random() * 5);
         health -= ran;
-        System.out.println("You have teleported!");
+        System.out.println("You have teleported! Your health is now at " + health + "/" + maxHealth);
     }
 
     //toString

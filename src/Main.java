@@ -15,10 +15,6 @@ public class Main
         System.out.println(one.toString());
         //Beginning the Main Plot with Scanner and Player.
         mainStory(key, one);
-
-        //Creating other Objects...
-        Bard venti = new Bard("Venti", 30, 10, true);
-        Wizard gandalf = new Wizard("Gandalf", 80, 30, true);
     }
 
     //Instantiate Player Object.
@@ -85,6 +81,7 @@ public class Main
         return unknown;
     }
 
+    //This is the Main Story Prompts.
     public static void mainStory(Scanner key, Player one)
     {
         String reply = "";
@@ -94,6 +91,7 @@ public class Main
                            selling rare jewelry. Oh dear! You come across an angry goblin!\n\nEntering battle...""");
 
         Goblin gob = new Goblin(50, 15, 15);
+        System.out.println(gob.toString());
 
         gob.takeCoins(one);
 
@@ -126,8 +124,19 @@ public class Main
         one.addCoins(15);
         one.backpack();
 
+        System.out.println("\nYou continue your journey to Meridian.");
+
         if (one instanceof Wizard)
             ((Wizard)one).teleport();
+        else
+        {
+            System.out.println("\nOn the way, you met a duo of strange yet warming folk.");
+            Bard venti = new Bard("Venti", 30, 10, true);
+            Wizard gandalf = new Wizard("Gandalf", 80, 30, true);
+
+            System.out.println("A wizard speaks, \"Hello there, you must be " + one.getName() + "! I am " +
+                                gandalf.getName() + ". Their friend of a short stature");
+        }
     }
 
     //Purpose: Player attacks.
