@@ -1,5 +1,6 @@
 //Updated 8:03 PM
 //Importing Scanner for User Input.
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main
@@ -150,6 +151,6 @@ public class Main
         else if (one instanceof Wizard)
             ((Wizard)one).spell(gob);
         else //(one instanceof Elf)
-            ((Elf)one).claw(gob);
+            ((Elf)one).elfAct(gob);
     }
 }

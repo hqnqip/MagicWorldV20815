@@ -48,11 +48,20 @@ public class Elf extends Player
     }
 
     //Brain Method
+    public void elfAct(Goblin gob)
+    {
+        System.out.println("Enter the following options: \n> 1) Claw\n> 2) Tame");
+        String reply = key.nextLine();
+        if (reply.equals("Claw") || reply.equals("1"))
+            claw(gob);
+        else
+            tame(gob);
+    }
+
     public void claw(Goblin gob)
     {
         if (animal.equals("Bear"))
         {
-            //Add more User options....
             gob.health -= (strength / 3);
             System.out.println("You roared, standing up on your hind legs, and swung your arm down at the enemy." +
                                 "\nThe goblin's health is currently " + gob.health + "/" + gob.maxHealth);
@@ -60,7 +69,7 @@ public class Elf extends Player
         else
         {
             //Add more User options....
-            gob.health -= (strength / 6);
+            gob.health -= (strength / 4);
             System.out.println("You screeched, diving down at the goblin and swiping your talons!" +
                                 "\nThe goblin cried. Their health is currently " + gob.health + "/" + gob.maxHealth);
         }
@@ -68,9 +77,17 @@ public class Elf extends Player
 
     public void tame(Goblin gob)
     {
-        gob.health = 0;
-        System.out.println("The goblin fainted from your small act of kindness." +
-                            "\nYou are able to escape this goblin.");
+        int ran = (int)(Math.random() * 2);
+        if (ran == 1)
+        {
+            gob.health = 0;
+            System.out.println("The goblin fainted from your small act of kindness." +
+                                "\nYou are able to escape this goblin.");
+        }
+        else
+        {
+            System.out.println("\nWell...");
+        }
     }
 
     //toString
