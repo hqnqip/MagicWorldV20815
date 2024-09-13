@@ -62,7 +62,7 @@ public class Player
 
     public void backpack()
     {
-        System.out.println("\nAccessing your backpack... \n1. Coins \n2. Food \n3. Exit");
+        System.out.println("\nAccessing your backpack... \n1. Coins \n3. Exit");
         String reply = key.nextLine();
         if (reply.equals("1") || reply.equals("Coins"))
         {
@@ -73,21 +73,6 @@ public class Player
             System.out.println("You decided to leave your backpack alone.");
         }
     }
-
-   /*
-   public void escape()
-   {
-       int ran = (int) (Math.random() * 3);
-       if (ran == 1)
-       {
-           System.out.println("You have successfully escaped the battle.");
-       }
-       else
-       {
-           System.out.println("Your foes have become angrier at your attempt to flee.");
-       }
-   }
-   */
 
     //toString
     public String toString()

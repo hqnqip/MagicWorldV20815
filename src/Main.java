@@ -135,11 +135,18 @@ public class Main
             Wizard whiteBeard = new Wizard("Golly", 80, 30, true);
             Elf bearElf = new Elf();
 
+            ArrayList<Player> folk = new ArrayList<>();
+            folk.add(drunkBard);
+            folk.add(whiteBeard);
+            folk.add(bearElf);
+
             System.out.println("A wizard speaks, \"Hello there, you must be " + one.getName() + "! I am " +
                                 whiteBeard.getName() + ".\"\nTheir friend of a short stature says, \"The name's " +
                                 drunkBard.getName() + "!\"\n\nAnd there is another  who does not like to speak....");
 
-            System.out.println("\n" + whiteBeard.toString() + "\n\n" + drunkBard.toString() + "\n\n" + bearElf.toString());
+            for (Player player : folk) {
+                System.out.println("\n" + player.toString());
+            }
         }
     }
 
