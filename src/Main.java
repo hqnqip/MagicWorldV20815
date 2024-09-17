@@ -60,6 +60,7 @@ public class Main
             ((Wizard)unknown).setStaff(weapon);
             return unknown;
         }
+        //This is for Elf.
         else if (reply.equals("3"))
         {
             unknown = new Elf("", 40, 40, "", 0);
@@ -73,6 +74,7 @@ public class Main
             ((Elf)unknown).setAnimal(reply);
             return unknown;
         }
+        //This is if there is unexpected user-input.
         else
         {
             System.out.println("\nLet us run this once more.");
@@ -81,20 +83,23 @@ public class Main
         return unknown;
     }
 
-    //This is the Main Story Prompts.
+    //This is the Main Story prompt.
     public static void mainStory(Scanner key, Player one)
     {
-        String reply = "";
+        String reply = ""; //To catch user-input.
         System.out.println("""
                            \nYou are on your way to enter Mirkwood, a forest of many terrible creatures.
                            But the path serves as your only way of finding the hidden elf town, known for\s
                            selling rare jewelry. Oh dear! You come across an angry goblin!\n\nEntering battle...""");
 
+        //Instantiates a Goblin object.
         Goblin gob = new Goblin(50, 15, 15);
         System.out.println(gob.toString());
 
+        //Plays a prompt.
         gob.takeCoins(one);
 
+        //Player and Goblin engages in a turn-based battle.
         while (gob.health > 0) {
             gob.strike(one);
             counter(one, gob);
@@ -106,6 +111,7 @@ public class Main
 
         System.out.println("\nOh no!\nAnd yet another one!\n\nEntering battle...");
 
+        //Instantiates another Goblin object.
         Goblin gobTwo = new Goblin();
 
         while (gobTwo.health > 0) {
@@ -130,11 +136,13 @@ public class Main
             ((Wizard)one).teleport();
         else
         {
+            //Instantiates more Player objects as friends.
             System.out.println("\nOn the way, you met a duo of strange yet warming folk.");
             Bard drunkBard = new Bard("Venti", 30, 10, true);
             Wizard whiteBeard = new Wizard("Golly", 80, 30, true);
             Elf bearElf = new Elf();
 
+            //Creates an ArrayList and adds objects to the ArrayList.
             ArrayList<Player> folk = new ArrayList<>();
             folk.add(drunkBard);
             folk.add(whiteBeard);
@@ -144,13 +152,15 @@ public class Main
                                 whiteBeard.getName() + ".\"\nTheir friend of a short stature says, \"The name's " +
                                 drunkBard.getName() + "!\"\n\nAnd there is another  who does not like to speak....");
 
+            //Prints the attributes of each new friend.
             for (Player player : folk) {
                 System.out.println("\n" + player.toString());
             }
         }
     }
 
-    //Purpose: Player attacks.
+    //Purpose: Assign different actions based on Player object type.
+    //This is for when it is the Player's turn in the battle.
     public static void counter(Player one, Goblin gob)
     {
         if (one instanceof Bard)
