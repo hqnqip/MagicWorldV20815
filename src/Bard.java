@@ -55,6 +55,7 @@ public class Bard extends Player
             songOfFlames(gob);
     }
 
+    //Purpose: Heals the Player.
     public void songOfHealing()
     {
         if (health < (maxHealth - 5))
@@ -70,6 +71,7 @@ public class Bard extends Player
         }
     }
 
+    //Purpose: Attack the Goblin.
     public void songOfFlames(Goblin gob)
     {
         System.out.println("\n♫ Let my heart light up ablaze." +

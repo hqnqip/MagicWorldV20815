@@ -55,11 +55,13 @@ public class Player
     }
 
     //Brain Method
+    //Purpose: Adding coins.
     public void addCoins(int num)
     {
         coins += num;
     }
 
+    //Purpose: Accessing a list of options: coins.
     public void backpack()
     {
         System.out.println("\nAccessing your backpack... \n1. Coins \n3. Exit");

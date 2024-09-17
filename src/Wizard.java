@@ -43,6 +43,7 @@ public class Wizard extends Player
     }
 
     //Brain
+    //Purpose: Provide options for Player to act in battle.
     public void spell(Goblin gob)
     {
         System.out.println("Select your attack: 1) Thunder Bolt or 2) Electric Sea.");
@@ -62,6 +63,7 @@ public class Wizard extends Player
         }
     }
 
+    //Purpose: Progresses the story, but skips over finding friends.
     public void teleport()
     {
         System.out.println("Perhaps it would be better to simply use your teleportation spell." +
