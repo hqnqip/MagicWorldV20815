@@ -12,16 +12,8 @@ All classes– whether parent or child– must have at least two constructors, g
 
 ### How to Use
 Run the program on IntelliJ.
-The game is introduced. You are asked to type a username; otherwise, you are registered as a guest.
-Then, the program introduces your rival, someone to play against you. 
-
-Both you and your rival begin on Position 1. 
-Answer the prompt or question assigned to that position.
-Answer correctly, you have a chance to make the basketball hoop and advance.
-Answer incorrectly, you automatically return to Position 1.
-
-The goal is for you to make your way to Position 7, OR be the first person to earn 30 points by making in hoops.
-Each position number you are on will give you that number of points. Ex. Position 4 --> 4 points.
+The game is introduced. You are asked to type a username; otherwise, you are registered as a default guest.
+Then, you are prompted to select a character class: Wizard, Bard, or Elf. Depending on your choice, your character stats differ, such as attack, defense, and actions. You encounter two goblins and must defeat them. Follow the prompts to correctly format your answers.
 
 ### Credits / Sources
 Inspired by "Dungeons and Dragons". The spells casted by the Wizard type are ideas credited to Jorge Toribio. Developed through IntelliJ (Java).
