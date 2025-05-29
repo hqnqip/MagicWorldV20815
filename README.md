@@ -17,3 +17,5 @@ Then, you are prompted to select a character class: Wizard, Bard, or Elf. Depend
 
 ### Credits / Sources
 Inspired by "Dungeons and Dragons". The spells casted by the Wizard type are ideas credited to Jorge Toribio. Developed through IntelliJ (Java).
+
+This is a solo project created by Hannah Pham.
